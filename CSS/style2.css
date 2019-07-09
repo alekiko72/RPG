@@ -1,0 +1,78 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: url(../Images/Background.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: sans-serif;
+
+}
+
+.starbar {
+
+  background: url(../Images/0200.gif);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 75px; 
+    overflow: hidden;
+  }
+.text-block{
+  position: absolute;
+  color: white;
+}
+
+.text{
+  height: 180%;
+  width: 300px;
+  transform: translate(-5%, -20%);
+}
+.logo{
+  height: 120%;
+  width: 130px;
+  transform: translate(-10%, -30%);
+}
+.glass{
+  height: 160%;
+  width: 130px;
+  transform: translate(60%, -25%);
+}
+
+#searchy{
+  position: relative;
+  width: 300px;
+  transform: translate(210%, -300%);
+  background: none;
+  outline-color: wheat;
+}
+#DM{
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: wheat;
+  font-size: 22px;
+  transform: translate(75%, -450%);
+}
+#DM:hover{
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+#logout{
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: wheat;
+  font-size: 22px;
+  transform: translate(92%, -550%);
+}
+#logout:hover{
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+}
