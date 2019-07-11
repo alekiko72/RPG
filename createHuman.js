@@ -22,11 +22,11 @@ function createHum(){
     stats[13] = 0;
     stats[14] = 0;
     getFate();
-    career = chooseHumCar();
+    career = chooseHumCar();//fix dice
     skills[0] = "Common Knowledge(Empire)";
     skills[1] = "Gossip";
     skills[2] = "Speak Language(Reikspiel)";
-    talents[0] = randTalents();
+    talents[0] = randTalents();//fix dice
     talents[1] = randTalents();
 
     console.log(stats);
