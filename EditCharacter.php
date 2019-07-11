@@ -1,6 +1,7 @@
 <?php
 	$inData = getRequestInfo();
 	
+	 $Id = $inData["Id"];
 	$name = $inData["namne"];
 	$race = $inData["race"];
 	$career = $inData["career"];
@@ -31,9 +32,7 @@
 	} 
 	else
 	{
-		$sql = "insert into characters (name, race, career, userId, sessionId, hpCurrent, hpMax, WS, BS, S, T, AG, INTE, WP, FEL, A, W, SB, TB, MAG, IP, FPP) 
-				VALUES (" . $name . ",'" . $race . ",'" . $career . ",'" . $userId . ",'" . $sessionId . ",'" . $hpCurrent . ",'" . $hpMax . ",'" . $WS . ",'" . $BS . ",'" . $S . ",'" . $T . ",'" . $AG . ",
-						" . $INTE . ",'" $WP . ",'" . $FEL . ",'" . $A . ",'" . $W . ",'" . $SB . ",'" . $TB . ",'" . $MAG . ",'" . $IP . ",'" . $FPP . ") '";
+		$sql = "update characters set (name, race, career, userId, sessionId, hpCurrent, hpMax, WS, BS, S, T, AG, INTE, WP, FEL, A, W, SB, TB, MAG, IP, FPP) where ID = $ID";
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );
@@ -47,7 +46,6 @@
 	{
 		return json_decode(file_get_contents('php://input'), true);
 	}
-
 	function sendResultInfoAsJson( $obj )
 	{
 		header('Content-type: application/json');

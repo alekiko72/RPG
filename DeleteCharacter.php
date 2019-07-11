@@ -31,7 +31,7 @@
 	} 
 	else
 	{
-		$sql = "insert into characters (name, race, career, userId, sessionId, hpCurrent, hpMax, WS, BS, S, T, AG, INTE, WP, FEL, A, W, SB, TB, MAG, IP, FPP) 
+		$sql = "delete from characters (name, race, career, userId, sessionId, hpCurrent, hpMax, WS, BS, S, T, AG, INTE, WP, FEL, A, W, SB, TB, MAG, IP, FPP) 
 				VALUES (" . $name . ",'" . $race . ",'" . $career . ",'" . $userId . ",'" . $sessionId . ",'" . $hpCurrent . ",'" . $hpMax . ",'" . $WS . ",'" . $BS . ",'" . $S . ",'" . $T . ",'" . $AG . ",
 						" . $INTE . ",'" $WP . ",'" . $FEL . ",'" . $A . ",'" . $W . ",'" . $SB . ",'" . $TB . ",'" . $MAG . ",'" . $IP . ",'" . $FPP . ") '";
 		if( $result = $conn->query($sql) != TRUE )
@@ -47,7 +47,6 @@
 	{
 		return json_decode(file_get_contents('php://input'), true);
 	}
-
 	function sendResultInfoAsJson( $obj )
 	{
 		header('Content-type: application/json');

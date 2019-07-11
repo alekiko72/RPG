@@ -1,9 +1,9 @@
 <?php
-
 	$inData = getRequestInfo();
 	
-	$id = 0;
-
+	$name = $inData["name"];
+	$characterId = $inData["characterId"];
+	
 	$conn = new mysqli("localhost", "username", "password", "warhammer");
 	if ($conn->connect_error) 
 	{
@@ -11,27 +11,21 @@
 	} 
 	else
 	{
-		$sql = "SELECT ID FROM users where username='" . $inData["username"] . "' and password='" . $inData["password"] . "'";
-		$result = $conn->query($sql);
-		if ($result->num_rows > 0)
+		$sql = "delete from skills (name, characterId) VALUES (" . $name . ",'" . $characterId . ") '";
+		if( $result = $conn->query($sql) != TRUE )
 		{
-			$row = $result->fetch_assoc();
-			$id = $row["ID"];
-			
-			returnWithInfo($id);
-		}
-		else
-		{
-			returnWithError( "No Records Found" );
+			returnWithError( $conn->error );
 		}
 		$conn->close();
 	}
+	
+	returnWithError("");
 	
 	function getRequestInfo()
 	{
 		return json_decode(file_get_contents('php://input'), true);
 	}
-
+	
 	function sendResultInfoAsJson( $obj )
 	{
 		header('Content-type: application/json');
@@ -40,13 +34,7 @@
 	
 	function returnWithError( $err )
 	{
-		$retValue = '{"id":0}';
-		sendResultInfoAsJson( $retValue );
-	}
-	
-	function returnWithInfo( $username, $id )
-	{
-		$retValue = '{"id":' . $id . '}';
+		$retValue = '{"error":"' . $err . '"}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
