@@ -1,10 +1,14 @@
 <?php
+session_start();
+?>
+
+<?php
 	$inData = getRequestInfo();
 	
+	$userId = $_SESSION["USERR"];
 	$name = $inData["namne"];
 	$race = $inData["race"];
 	$career = $inData["career"];
-	$userId = $inData["userId"];
 	$sessionId = $inData["sessionId"];
 	$hpCurrent = $inData["hpCurrent"];
 	$hpMax = $inData["hpMax"];
@@ -30,10 +34,11 @@
 		returnWithError( $conn->connect_error );
 	} 
 	else
-	{
+	{				
 		$sql = "insert into characters (name, race, career, userId, sessionId, hpCurrent, hpMax, WS, BS, S, T, AG, INTE, WP, FEL, A, W, SB, TB, MAG, IP, FPP) 
-				VALUES (" . $name . ",'" . $race . ",'" . $career . ",'" . $userId . ",'" . $sessionId . ",'" . $hpCurrent . ",'" . $hpMax . ",'" . $WS . ",'" . $BS . ",'" . $S . ",'" . $T . ",'" . $AG . ",
-						" . $INTE . ",'" $WP . ",'" . $FEL . ",'" . $A . ",'" . $W . ",'" . $SB . ",'" . $TB . ",'" . $MAG . ",'" . $IP . ",'" . $FPP . ") '";
+				VALUES ('" . $name . "','" . $race . "','" . $career . "','" . $userId . "','" . $sessionId . "','" . $hpCurrent . "','" . $hpMax . "','" . $WS . "','" . $BS . "','" . $S . "','" . $T . "','" . $AG . "',
+				'" . $INTE . "','" . $WP . "','" . $FEL . "','" . $A . "','" . $W . "','" . $SB . "','" . $TB . "','" . $MAG . "','" . $IP . "','" . $FP . "') ";
+		
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );

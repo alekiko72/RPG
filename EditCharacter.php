@@ -1,11 +1,14 @@
 <?php
+session_start();
+?>
+
+<?php
 	$inData = getRequestInfo();
 	
-	 $Id = $inData["Id"];
+	$userId = $_SESSION["USERR"];
 	$name = $inData["namne"];
 	$race = $inData["race"];
 	$career = $inData["career"];
-	$userId = $inData["userId"];
 	$sessionId = $inData["sessionId"];
 	$hpCurrent = $inData["hpCurrent"];
 	$hpMax = $inData["hpMax"];
@@ -32,7 +35,9 @@
 	} 
 	else
 	{
-		$sql = "update characters set (name, race, career, userId, sessionId, hpCurrent, hpMax, WS, BS, S, T, AG, INTE, WP, FEL, A, W, SB, TB, MAG, IP, FPP) where ID = $ID";
+		$sql = "update characters set (name, race, career, userId, sessionId, hpCurrent, hpMax, WS, BS, S, T, AG, INTE, WP, FEL, A, W, SB, TB, MAG, IP, FPP) 
+				VALUES ('" . $name . "','" . $race . "','" . $career . "','" . $userId . "','" . $sessionId . "','" . $hpCurrent . "','" . $hpMax . "','" . $WS . "','" . $BS . "','" . $S . "','" . $T . "','" . $AG . "',
+				'" . $INTE . "','" . $WP . "','" . $FEL . "','" . $A . "','" . $W . "','" . $SB . "','" . $TB . "','" . $MAG . "','" . $IP . "','" . $FP . "') ";
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );

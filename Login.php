@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 
 	$inData = getRequestInfo();
 	
@@ -17,7 +21,7 @@
 		{
 			$row = $result->fetch_assoc();
 			$id = $row["ID"];
-			
+			$_SESSION["USERR"] = $id;
 			returnWithInfo($id);
 		}
 		else
