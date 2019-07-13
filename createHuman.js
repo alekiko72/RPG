@@ -1,7 +1,7 @@
 var stats = [];
 var skills = [];
 var talents = [];
-var trappings = [];
+var trappings = ["Common Clothing", "Breeches", "Worn Boots", "Tattered Cloak", "Dagger", "Sling", "Backpack",	"Blanket", "Wooden Tankard", "Wooden Cutlery Set", "Any Hand Weapon","13 Gold"];
 var d1;
 var d2;
 var tot;
@@ -30,9 +30,6 @@ function createHum(){
     talents[0] = randTalents();//fix dice
     talents[1] = randTalents();
 
-    console.log(stats);
-    console.log(career);
-    console.log(skills);
     skills = skills.concat(getCarSki(career));
     talents = talents.concat(getCarTal(career));
     trappings = trappings.concat(getCarTrap(career));
@@ -165,7 +162,10 @@ function randTalents(){
         return "Super Numerate";
     }
     else if(dTalent <= 91 && dTalent >= 88){
-        return "Vert Resilient";
+        return "Very Resilient";
+    }
+    else if(dTalent <= 95 && dTalent >= 92){
+        return "Very Strong"
     }
     else if(dTalent <= 100 && dTalent >= 96){
         return "Warrior Born";
