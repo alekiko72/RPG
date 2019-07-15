@@ -1,8 +1,6 @@
 <?php
 	$inData = getRequestInfo();
-	
-	$name = $inData["name"];
-	$characterId = $inData["characterId"];
+	$ID = $inData["ID"];
 	
 	$conn = new mysqli("localhost", "username", "password", "warhammer");
 	if ($conn->connect_error) 
@@ -11,7 +9,7 @@
 	} 
 	else
 	{
-		$sql = "delete from items (name, characterId) VALUES (" . $name . ",'" . $characterId . ") '";
+		$sql = "delete from items WHERE items.ID = " . $ID . " ";
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );

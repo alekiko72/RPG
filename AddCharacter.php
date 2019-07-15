@@ -6,7 +6,7 @@ session_start();
 	$inData = getRequestInfo();
 	
 	$userId = $_SESSION["USERR"];
-	$name = $inData["namne"];
+	$name = $inData["name"];
 	$race = $inData["race"];
 	$career = $inData["career"];
 	$sessionId = $inData["sessionId"];

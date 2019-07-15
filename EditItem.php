@@ -1,7 +1,7 @@
 <?php
 	$inData = getRequestInfo();
 	
-	$Id = $inData["Id"];
+	$ID = $inData["ID"];
 	$name = $inData["name"];
 	$characterId = $inData["characterId"];
 	
@@ -12,7 +12,7 @@
 	} 
 	else
 	{
-		$sql = "update items set (name, characterId) where ID = $ID";
+		$sql = "UPDATE items SET name = '$name', characterId = '$characterId' WHERE ID = $ID";
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );

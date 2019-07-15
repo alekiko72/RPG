@@ -1,12 +1,8 @@
 <?php
-session_start();
-?>
-
-<?php
 	$inData = getRequestInfo();
 	
-	$userId = $_SESSION["USERR"];
-	$name = $inData["namne"];
+	$ID = $inData["ID"];
+	$name = $inData["name"];
 	$race = $inData["race"];
 	$career = $inData["career"];
 	$sessionId = $inData["sessionId"];
@@ -35,9 +31,8 @@ session_start();
 	} 
 	else
 	{
-		$sql = "update characters set (name, race, career, userId, sessionId, hpCurrent, hpMax, WS, BS, S, T, AG, INTE, WP, FEL, A, W, SB, TB, MAG, IP, FPP) 
-				VALUES ('" . $name . "','" . $race . "','" . $career . "','" . $userId . "','" . $sessionId . "','" . $hpCurrent . "','" . $hpMax . "','" . $WS . "','" . $BS . "','" . $S . "','" . $T . "','" . $AG . "',
-				'" . $INTE . "','" . $WP . "','" . $FEL . "','" . $A . "','" . $W . "','" . $SB . "','" . $TB . "','" . $MAG . "','" . $IP . "','" . $FP . "') ";
+		$sql = "UPDATE characters SET name = '$name', race = '$race', career = '$career', userId = '$userId', sessionId = '$sessionId', hpCurrent = '$hpCureent', hpMax = '$hpMax', WS = '$WS', BS = '$BS', S = '$S', T = '$T', 
+				AG = '$AG', INTE = '$INTE', WP = '$INTE', FEL = '$FEL', A = '$A', W = '$W', SB = '$SB', TB = '$TB', MAG = '$MAG', IP = '$IP', FPP = '$FPP' WHERE ID = '$ID'";
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );

@@ -11,7 +11,7 @@
 	} 
 	else
 	{
-		$sql = "insert into items (name, characterId) VALUES (" . $name . ",'" . $characterId . ") '";
+		$sql = "insert into items (name, characterId) VALUES ('" . $name . "','" . $characterId . "') ";
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );
