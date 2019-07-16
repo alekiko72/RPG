@@ -15,7 +15,7 @@ session_start();
 	} 
 	else
 	{
-		$sql = "SELECT ID FROM users where username='" . $inData["username"] . "' and password='" . $inData["password"] . "'";
+		$sql = "select ID from users where username = '" . $inData["username"] . "' and password = '" . $inData["password"] . "'";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0)
 		{
@@ -48,7 +48,7 @@ session_start();
 		sendResultInfoAsJson( $retValue );
 	}
 	
-	function returnWithInfo( $username, $id )
+	function returnWithInfo( $id )
 	{
 		$retValue = '{"id":' . $id . '}';
 		sendResultInfoAsJson( $retValue );
