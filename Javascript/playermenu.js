@@ -3,17 +3,18 @@ var contactsTab = document.querySelector("#tabledo > tbody");
 function addRow(){
 
     // Get all the elements the user inputs for the contacts table
-    var firstname = document.getElementById('FirstName').value;
-    var lastname = document.getElementById('LastName').value;
-    var number = document.getElementById('Number').value;
-    var email = document.getElementById('Email').value;
+    var choice1 = document.getElementById('choice1').value;
+    var choice2 = document.getElementById('choice2').value;
 
     // Pass Table into Javascript
     var table = document.getElementsByTagName('table')[0];
     
     // Create a new row at the end of the table
-    var newRow = table.insertRow(table.rows.length);
+    var newRow2 = table.insertRow(table.rows.length);
+    newRow2.setAttribute("class", "spacer");
 
+
+    var newRow = table.insertRow(table.rows.length);
     // Create all the cells needed
     var cell0 = newRow.insertCell(0);
     var cell1 = newRow.insertCell(1);
@@ -21,30 +22,34 @@ function addRow(){
     var cell3 = newRow.insertCell(3);
     var cell4 = newRow.insertCell(4);
     var cell5 = newRow.insertCell(5);
+    var cell6 = newRow.insertCell(6);
 
     // Add the elements to each cell
-    cell0.innerHTML = firstname;
-    cell1.innerHTML = lastname;
-    cell2.innerHTML = number;
-    cell3.innerHTML = email;
+    cell0.innerHTML = "-----V-----";
+    cell0.setAttribute("class", "clickable");
+    cell0.setAttribute("data-target", "#accordion3");
+    cell0.setAttribute("data-toggle", "collapse");
+    cell1.innerHTML = choice1;
+    cell2.innerHTML = choice2;
+    cell3.innerHTML = "Career";
+    cell4.innerHTML = "53";
+    cell5.innerHTML = "78";
+    cell6.innerHTML = "email";
 
-    // Create Buttons for edit and delete
-    var edito = document.createElement("IMG");
-    edito.setAttribute("src", "Images/leafedit.png");
-    cell4.appendChild(edito);
+    var newRow3 = table.insertRow(table.rows.length); 
+    var cell01 = newRow3.insertCell(0);
+    cell01.setAttribute("colspan", "7");
+    cell01.setAttribute("id", "accordion3");
+    cell01.setAttribute("class", "collapse");
+    var div = document.createElement("div");
+    div.innerHTML = "Hello";
 
-    var ident = table.rows.length;
+    cell01.appendChild(div);
+
+    //addCharacter(choice1, choice2);
     
-    var deleto = document.createElement("IMG");
-    deleto.setAttribute("src", "Images/leafdelete.png");
-    deleto.setAttribute("class", "table-remove");
-    deleto.setAttribute("id", ident);
-    cell5.appendChild(deleto);
-
-    addContact(firstname, lastname, number, email);
-    
-    refresh();
-    loadTable();
+    //refresh();
+    //loadTable();
     
 
 

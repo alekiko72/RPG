@@ -1,3 +1,6 @@
+html {
+  cursor: url(../Images/hammer.png), default;
+}
 body{
     padding: 0;
     margin: 0;
@@ -7,7 +10,6 @@ body{
     -o-background-size: cover;
     background-size: cover;
     font-family: sans-serif;
-
 }
 
 .starbar {
@@ -49,33 +51,73 @@ body{
   outline-color: wheat;
 }
 #DM{
-  display: block;
+  display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: wheat;
   font-size: 22px;
-  transform: translate(75%, -450%);
+  transform: translate(400%, -70%);
 }
 #DM:hover{
-  display: block;
+  display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: white;
 }
 #logout{
-  display: block;
+  display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: wheat;
   font-size: 22px;
-  transform: translate(92%, -550%);
+  transform: translate(800%, -70%);
 }
 #logout:hover{
-  display: block;
+  display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: white;
 }
+
+#top{
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: wheat;
+  font-size: 52px;
+  transform: translate(65%, -20%);
+}
+
+.modal-header{
+  background-color: rgb(165, 113, 83);
+}
+.modal-body{
+  background-color: rgb(218, 181, 159);
+  color: rgb(82, 48, 26);
+}
+.modal-footer{
+  background-color: rgb(218, 181, 159);
+}
+#Confirm{
+  background-color: rgb(165, 113, 83);
+  border-style: solid;
+  border-color: black;
+}
+#choice1{
+  background-color: rgb(218, 181, 159);
+  color: rgb(82, 48, 26);
+  outline: none;
+  border: none;
+  width: 80%;
+}
+#choice2{
+  background-color: rgb(218, 181, 159);
+  color: rgb(82, 48, 26);
+  outline: none;
+  border: none;
+  width: 80%;
+}
+
 
 #tabledo{
   width:70%;
@@ -83,6 +125,9 @@ body{
   position: absolute;
   transform: translate(20%, 200px);
   border-collapse: collapse;
+  border-style: solid;
+  border-color: rgb(85, 34, 34);
+  border-width: 10px;
 }
 
 .spacer{
@@ -95,7 +140,7 @@ tr{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 25px;
   color: rgb(82, 48, 26);
-  background-color: rgb(218, 181, 159);
+  background-color: rgb(223, 178, 153);
   margin: 59px;
   padding: 59px;
   width: 200px;
@@ -119,10 +164,22 @@ th{
 .boxy{
   background-color: blanchedalmond;
   color: rgb(82, 48, 26);
+  width: 60%;
 }
 .addy{
   height: 15%;
   width: 9.8%;
   transform: translate(5%, 109%);
   position:fixed;
+}
+
+#myTextArea{
+  margin-top: 40px;
+  background-color: blanchedalmond;
+  color: rgb(82, 48, 26);
+}
+
+.headcopy{
+  font-size: 20px;
+  font-weight: bold;
 }

@@ -11,22 +11,22 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="ModalCreateLabel">Create Contact</h5>
+                        <h5 class="modal-title" id="ModalCreateLabel">Create a new character</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         Name:<br>
-                        <input type="text" name="FirstName" placeholder="Name" id="Name">
+                        <input type="text" name="Name" placeholder="Name" id="choice1">
                         <br>
                         <br>
                         Race:<br>
-                        <input type="text" name="LastName" placeholder="Last Name" id="LastName">
+                        <input type="text" name="Race" placeholder="Race" id="choice2">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="button" button onclick ="addRow();" data-dismiss="modal" class="btn btn-primary">Save Contact</button>
+                        <button type="button" id="noConfirm" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" id="Confirm" button onclick ="addRow();" data-dismiss="modal" class="btn btn-primary">Create Random Character</button>
                     </div>
                     </div>
                 </div>
@@ -79,28 +79,6 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Starting</td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Advances</td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                        </tr>
-                                        <tr>
                                             <td>Current</td>
                                             <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
                                             <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
@@ -111,40 +89,18 @@
                                             <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
                                             <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
                                         </tr>
-                                    </tbody>
-                                    <thead>
                                         <tr>
-                                            <th></th>
-                                            <th>A</th>
-                                            <th>W</th>
-                                            <th>SB</th>
-                                            <th>TB</th>
-                                            <th>MAG</th>
-                                            <th>IP</th>
-                                            <th>FPP</th>
+                                            <td></td>
+                                            <td class="headcopy">A</td>
+                                            <td class="headcopy">W</td>
+                                            <td class="headcopy">SB</td>
+                                            <td class="headcopy">TB</td>
+                                            <td class="headcopy">M</td>
+                                            <td class="headcopy">MAG</td>
+                                            <td class="headcopy">IP</td>
+                                            <td class="headcopy">FPP</td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Starting</td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Advances</td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                            <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
-                                        </tr>
+
                                         <tr>
                                             <td>Current</td>
                                             <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
@@ -153,7 +109,20 @@
                                             <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
                                             <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
                                             <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
+                                            <td><input type="number" name="quantity" min="1" max="500" class="boxy"></td>
                                             <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Skills:</td>
+                                            <td colspan="8"><textarea id = "myTextArea" cols="70" >...</textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Talents:</td>
+                                            <td colspan="8"><textarea id = "myTextArea" cols="70" >...</textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Items:</td>
+                                            <td colspan="8"><textarea id = "myTextArea" cols="70" >...</textarea></td>
                                         </tr>
                                         </tbody>
                                 </table>
@@ -190,8 +159,7 @@
         <div class="starbar">
                 <img src="Images/logo.png" class="logo">
                 <img src="Images/logotext.png" class="text">
-                <img src="Images/search.png" class="glass">
-                <input class="form-control" type="text" name="" id="searchy" placeholder="Search Character">
+                <p id="top"> Characters </p>
                 <a href="DMmenu.html" id="DM">
                         DM Mode
                 </a>
@@ -202,15 +170,11 @@
                 
         <script src="JavaScript/playermenu.js"></script>
         
-        
-
-
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-
 <!--<p class="inlin">Name:</p> <p class="inlin2" contenteditable="true">Fill</p>
                                 <p class="inlin">Race:</p> <p class="inlin2" contenteditable="true">fill</p>
                                 <p class="inlin">Class:</p> <p class="inlin2" contenteditable="true">fill</p>
