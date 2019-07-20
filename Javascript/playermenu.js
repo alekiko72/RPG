@@ -13,6 +13,29 @@ function addRow(){
     var newRow2 = table.insertRow(table.rows.length);
     newRow2.setAttribute("class", "spacer");
 
+    var newRow0 = table.insertRow(table.rows.length);
+    // Create all the cells needed
+    var cel0 = newRow0.insertCell(0);
+    var cel1 = newRow0.insertCell(1);
+    var cel2 = newRow0.insertCell(2);
+    var cel3 = newRow0.insertCell(3);
+    var cel4 = newRow0.insertCell(4);
+    var cel5 = newRow0.insertCell(5);
+    var cel6 = newRow0.insertCell(6);
+
+    // Add the elements to each cell
+    cel0.innerHTML = "";
+    cel1.innerHTML = "Name";
+    cel1.setAttribute("class", "headcopy");
+    cel2.innerHTML = "Race";
+    cel2.setAttribute("class", "headcopy");
+    cel3.innerHTML = "Career";
+    cel3.setAttribute("class", "headcopy");
+    cel4.innerHTML = "Current HP";
+    cel4.setAttribute("class", "headcopy");
+    cel5.innerHTML = "Max HP";
+    cel6.setAttribute("class", "headcopy");
+    cel6.innerHTML = " ";
 
     var newRow = table.insertRow(table.rows.length);
     // Create all the cells needed
