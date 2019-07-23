@@ -122,64 +122,61 @@ function getFate(){
 function randTalents(){//ADJUST THE TABLE
     var dTalent = Math.floor(Math.random() * (+101 - +1)) + +1
 
-    if(dTalent <= 4 && dTalent >= 1){
+    if(dTalent <= 5 && dTalent >= 1){
         return "Acute Hearing";
     }
-    else if(dTalent <= 9 && dTalent >= 5){
+    else if(dTalent <= 10 && dTalent >= 6){
         return "Ambidextrous"
     }
-    else if(dTalent <= 13 && dTalent >= 10){
+    else if(dTalent <= 15 && dTalent >= 11){
         return "Coolheaded";
     }
-    else if(dTalent <= 18 && dTalent >= 14){
+    else if(dTalent <= 20 && dTalent >= 16){
         return "Excellent Vision";
     }
-    else if(dTalent <= 22 && dTalent >= 19){
+    else if(dTalent <= 25 && dTalent >= 21){
         return "Fleet Footed";
     }
-    else if(dTalent <= 27 && dTalent >= 23){
+    else if(dTalent <= 29 && dTalent >= 26){
         return "Hardy"
     }
-    else if(dTalent <= 31 && dTalent >= 28){
+    else if(dTalent <= 33 && dTalent >= 30){
         return "Lightning Reflexes"
     }
-    else if(dTalent <= 35 && dTalent >= 32){
+    else if(dTalent <= 38 && dTalent >= 34){
         return "Luck";
     }   
-    else if(dTalent <= 40 && dTalent >= 36){
+    else if(dTalent <= 42 && dTalent >= 39){
         return "Marksman";
     }
-    else if(dTalent <= 44 && dTalent >= 41){
+    else if(dTalent <= 47 && dTalent >= 43){
         return "Mimic";
     }
-    else if(dTalent <= 49 && dTalent >= 45){
-        return "Night Vision";
-    }
-    else if(dTalent <= 53 && dTalent >= 50){
+    else if(dTalent <= 51 && dTalent >= 48){
         return "Resistence to Disease";
     }
-    else if(dTalent <= 57 && dTalent >= 54){
+    else if(dTalent <= 53 && dTalent >= 52){
         return "Resistence to Magic";
     }
-    else if(dTalent <= 61 && dTalent >= 58){
+    else if(dTalent <= 57 && dTalent >= 54){
         return "Resistence to Poison";
     }
-    else if(dTalent <= 66 && dTalent >= 62){
+    else if(dTalent <= 62 && dTalent >= 58){
         return "Savvy";
     }
-    else if(dTalent <= 71 && dTalent >= 67){
+    else if(dTalent <= 67 && dTalent >= 63){
         return "Sixth Sense";
     }
-    else if(dTalent <= 75 && dTalent >= 172){
+    else if(dTalent <= 72 && dTalent >= 68){
         return "Strong-Minded";
     }
-    else if(dTalent <= 79 && dTalent >= 76){
+    else if(dTalent <= 77 && dTalent >= 73){
         return "Sturdy";
     }
-    else if(dTalent <= 83 && dTalent >= 80){
+    else if(dTalent <= 82 && dTalent >= 78){
         return "Suave";
     }
-    else if(dTalent <= 87 && dTalent >= 84){
+    else if(dTalent <= 87 && dTalent >= 83){
         return "Super Numerate";
     }
     else if(dTalent <= 91 && dTalent >= 88){
@@ -338,19 +335,20 @@ function getCarSki(car){
     
         switch(car){
             case "Agitator" :
-                var agitator = ["Academic Knowledge(History)", "Gossip", "Academic Knowledge(Law)", "Common Knowledge(Empire)", "Concealment", "Charm", "Perception", "Read/Write", "Speak Language(Breton)", "Speak Language(Reikspiel)"] 
+                var agitator = ["Academic Knowledge(History)", "Gossip", "Academic Knowledge(Law)", "Common Knowledge(the Empire)", "Concealment", "Charm", "Perception", "Read/Write", "Speak Language(Breton)", "Speak Language(Reikspiel)", "Speak Language(Tilean)"] 
                 return agitator;
             case "Apprentice Wizard" :
-                var apprentice = ["Academic Knowledge(Magic)", "Channelling", "Magical Sense", "Perception", "Search", "Speak Arcane Language(Magick)", "Speak Language(Classical)"];
+                var apprentice = ["Academic Knowledge(Magic)", "Channelling", "Magical Sense", "Perception", "Read/Write", "Search", "Speak Arcane Language(Magick)", "Speak Language(Classical)"];
                 return apprentice;
             case "Bailiff" :
                 var bailiff = ["Academic Knowledge(Law)", "Animal Care", "Gossip", "Charm", "Command", "Navigation", "Intimidiate", "Common Knowledge(the Empire)", "Perception", "Read/Write", "Ride"];
                 return bailiff;
             case  "Barber-Surgeon" :
-                var barber = ["Charm", "Drive", "Swim", "Haggle", "Heal", "Perception", "Read/Write", "Speak Language(Breton)", "Speak Language(Tilean)", "Trade(Apothecary)"];
+                var barber = ["Charm", "Drive", "Swim", "Haggle", "Heal", "Perception", "Read/Write", "Speak Langugae(Reikspiel)", "Speak Language(Breton)", "Speak Language(Tilean)", "Trade(Apothecary)"];
                 return barber;
             case "Boatman" :
-                var boatman = ["Common Knowledge(the Empire)", "Common Knowledge(Kislev)", "Consume Alcohol", "Gossip", "Navigation", "Outdoor Survival", "Perception", "Row", "Sail", "Secret Language(Ranger)", "Speak Language(Kislevian)", "Swim",]
+                var boatman = ["Common Knowledge(the Empire)", "Common Knowledge(Kislev)", "Consume Alcohol", "Gossip", "Navigation", "Outdoor Survival", "Perception", "Row", "Sail", "Secret Language(Ranger)", "Speak Language(Kislevian)", "Swim",];
+                return boatman;
             case "Bodyguard" :
                 var bodyguard = ["Dodge Blow", "Intimidate", "Perception"];
                 return bodyguard;
@@ -364,7 +362,7 @@ function getCarSki(car){
                 var burg = ["Common Knowledge(the Empire)", "Consomue Alcohol", "Drive", "Evaluate", "Gossip", "Read/Write", "Haggle", "Perception", "Search", "Speak Language(Breton)", "Speak Language(Kislevian)", "Speak Language(Tilean)", "Speak Language(Reikspeil)"];
                 return burg;
             case "Camp Follower" :
-                var camp = ["Animal Care","Drive", "Charm", "Evaluate", "Gossip", "Haggle", "Perception", "Search", "Trade(Armourer)", "Trade(Bowyer)", "Trade(Cartographer)", "Trade(Cook)", "Trade(Gunsmith)", "Trade(Herbalist)", "Trade(Tailor)", "Trade(Weaponsmith)", "Speak Language(Breton)", "Speak Language(Kislevian)", "Speak Language(Tilean)", "Sleight of Hand"];
+                var camp = ["Animal Care","Drive", "Charm", "Evaluate", "Gossip", "Haggle", "Perception", "Search", "Trade(Merchant)", "Trade(Smith)", "Trade(Armourer)", "Trade(Bowyer)", "Trade(Cartographer)", "Trade(Cook)", "Trade(Gunsmith)", "Trade(Herbalist)", "Trade(Tailor)", "Trade(Weaponsmith)", "Speak Language(Breton)", "Speak Language(Kislevian)", "Speak Language(Tilean)", "Sleight of Hand"];
                 return camp;
             case "Charcoal-Burner" :
                 var charcoal = ["Common Knowledge(the Empire)", "Concealment", "Drive", "Gossip", "Haggle", "Outdoor Survival", "Perception", "Scale Sheer Surface", "Search", "Secret Signs(Ranger)"];
@@ -373,7 +371,7 @@ function getCarSki(car){
                 var coach = ["Animal Care", "Drive", "Gossip", "Haggle", "Heal", "Ride", "Navigation", "Perception", "Secret Signs(Ranger)", "Speak Language(Breton)","Speak Language(Kislevian)", "Speak Language(Tilean)"];
                 return coach;
             case "Entertainer" :
-                var entertain = ["Animal Care", "Swim", "Charm",  "Common Knowledge(the Empire)", "Evaluate", "Gossip", "Perception", "Performer(any)","Performer(any)", "Animal Training" , "Blather", "Charm Animal", "Hypnotism", "Ride", "Scale Sheer Surface" , "Sleight of Hand" ,"Ventriloquism"];
+                var entertain = ["Animal Care", "Swim", "Charm",  "Common Knowledge(the Empire)", "Evaluate", "Gossip", "Perception", "Performer(any)","Performer(any)", "Animal Training" , "Blather", "Charm Animal", "Hypnotism", "Ride", "Scale Sheer Surface" , "Sleight of Hand" ,"Ventriloquism", "Speak Language(Reikspiel)"];
                 return entertain;
             case "Envoy" :
                 var envoy = ["Charm", "Common Knowledge(the Empire)", "Common Knowledge(the Empire)", "Common Knowledge(the Wasteland)", "Evaluate", "Gossip", "Haggle", "Perception", "Read/Write", "Secret Language(Guild Tongue)", "Swim", "Trade(Merchant)"];
@@ -455,6 +453,7 @@ function getCarSki(car){
                 return road;
             case "Rogue" :
                 var rogue = ["Blather", "Charm", "Evaluate", "Gamble", "Secret Signs(Thief)", "Gossip", "Haggle", "Perception", "Performer(Actor)", "Peformer(Storyteller)", "Search", "Secret Language(Thieves’ Tongue)", "Speak Language(Reikspiel)"]
+                return rogue;
             case "Runebearer" :
                 var rune = ["Dodge Blow", "Navigation", "Outdoor Survival", "Secret Signs(Scout)", "Perception", "Swim"];
                 return rune; 
@@ -541,7 +540,7 @@ function getCarTal(car){
             var boatman = ["Orientation", "Seasoned Traveler"];
             return boatman;
         case "Bodyguard" :
-            var bodyguard = ["Disarm", "Quick Draw", "Specialist Weapon Group(Parrying)", "Specialist Weapon Group(Throwing)",];
+            var bodyguard = ["Disarm", "Quick Draw", "Specialist Weapon Group(Parrying)", "Specialist Weapon Group(Throwing)","Street Fighting", "Strinke to Stun", "Very Strong", "Very Resilient"];
             return bodyguard;
         case "Bone Picker" :
             var bone = ["Coolheaded","Streetwise", "Hardy", "Resistance to Disease"];
@@ -665,6 +664,7 @@ function getCarTal(car){
             return smug;
         case "Soldier" :
             var soldider = ["Disarm", "Quick Draw", "Sharpshooter", "Strike Mighty Blow", "Specialist Weapon Group(Gunpowder)", "Specialist Weapon Group(Two-handed)", "Strike to Injure", "Rapid Reload", "Strike to Stun", "Mighty Shot"]
+            return solider;
         case "Squire" :
             var squire = ["Etiquette", "Specialist Weapon Group(Cavalry)", "Strike Mighty Blow"];
             return squire; 
@@ -840,7 +840,7 @@ function getCarTrap(car){
             return scribe; 
         case "Seaman" :
             var sea = ["Leather Jerkin", "Bottle of Poor Craftsmenship Spirits"];
-            return sea; 
+            return sea;     
         case "Servant" :
             var serve = ["One Set of Good Craftsmenship Clothing", "Pewter Tankard", "Tinderbox", "Storm Lantern", "Lamp Oil"];
             return serve;
@@ -851,7 +851,8 @@ function getCarTrap(car){
             var smug = ["Leather Jack", "2 Torches", "Draft Horse", "Cart", "Rowing Boat"];
             return smug;
         case "Soldier" :
-            var soldider = ["Halberd",  "Firearm", "10 shots", "Shield" , "Full Leather Armour", "Uniform"]
+            var soldider = ["Halberd",  "Firearm", "10 shots", "Shield" , "Full Leather Armour", "Uniform"];
+            return soldider;
         case "Squire" :
             var squire = ["Demilance", "Mail Shirt", "Mail Coif", "Leather Jack", "Shield", "Horse", "Saddle", "Harness"];
             return squire; 
