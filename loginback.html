@@ -22,7 +22,7 @@
                         <br>
                         <br>
                         Race:<br>
-                        <input type="text" name="Race" placeholder="Race" id="choice2">
+                        <input type="text" name="Race" placeholder="Race" id="choice">
                     </div>
                     <div class="modal-footer">
                         <button type="button" id="noConfirm" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -47,7 +47,6 @@
                     <th>Current HP</th>
                     <th>Max HP</th>
                     <th> </th> 
-                    <th> </th> 
                   </tr>
                 </thead>
                 
@@ -59,9 +58,7 @@
                         <td contenteditable="true">Sorceress</td>
                         <td contenteditable="true">40</td>
                         <td contenteditable="true">112</td>
-                        <td>  </td>
-                        <td> </td>
-                        <td>  </td>
+                        <td> <img src="Images/fill.png" class="filler"></td>
                     </tr>
                     <tr>
                         <td colspan="7">
@@ -92,18 +89,21 @@
                                             <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
                                             <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
                                         </tr>
+                                    </tbody>
+                                    <thead>
                                         <tr>
-                                            <td></td>
-                                            <td class="headcopy">A</td>
-                                            <td class="headcopy">W</td>
-                                            <td class="headcopy">SB</td>
-                                            <td class="headcopy">TB</td>
-                                            <td class="headcopy">M</td>
-                                            <td class="headcopy">MAG</td>
-                                            <td class="headcopy">IP</td>
-                                            <td class="headcopy">FPP</td>
+                                            <th></th>
+                                            <th>A</th>
+                                            <th>W</th>
+                                            <th>SB</th>
+                                            <th>TB</th>
+                                            <th>M</th>
+                                            <th>MAG</th>
+                                            <th>IP</th>
+                                            <th>FPP</th>
                                         </tr>
-
+                                    </thead>
+                                    <tbody>
                                         <tr>
                                             <td>Current</td>
                                             <td><input type="number" name="quantity" min="1" max="100" class="boxy"></td>
@@ -117,15 +117,15 @@
                                         </tr>
                                         <tr>
                                             <td>Skills:</td>
-                                            <td colspan="8"><textarea class="myTextArea" cols="70" >...</textarea></td>
+                                            <td colspan="8"><textarea id = "myTextArea" cols="70" >...</textarea></td>
                                         </tr>
                                         <tr>
                                             <td>Talents:</td>
-                                            <td colspan="8"><textarea class="myTextArea" cols="70" >...</textarea></td>
+                                            <td colspan="8"><textarea id = "myTextArea" cols="70" >...</textarea></td>
                                         </tr>
                                         <tr>
                                             <td>Items:</td>
-                                            <td colspan="8"><textarea class="myTextArea" cols="70" >...</textarea></td>
+                                            <td colspan="8"><textarea id = "myTextArea" cols="70" >...</textarea></td>
                                         </tr>
                                         </tbody>
                                 </table>
