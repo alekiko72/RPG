@@ -663,8 +663,8 @@ function getCarTal(car){
             var smug = ["Dealmaker", "Streetwise"];
             return smug;
         case "Soldier" :
-            var soldider = ["Disarm", "Quick Draw", "Sharpshooter", "Strike Mighty Blow", "Specialist Weapon Group(Gunpowder)", "Specialist Weapon Group(Two-handed)", "Strike to Injure", "Rapid Reload", "Strike to Stun", "Mighty Shot"]
-            return solider;
+            var soldier = ["Disarm", "Quick Draw", "Sharpshooter", "Strike Mighty Blow", "Specialist Weapon Group(Gunpowder)", "Specialist Weapon Group(Two-handed)", "Strike to Injure", "Rapid Reload", "Strike to Stun", "Mighty Shot"]
+            return soldier;
         case "Squire" :
             var squire = ["Etiquette", "Specialist Weapon Group(Cavalry)", "Strike Mighty Blow"];
             return squire; 
@@ -851,8 +851,8 @@ function getCarTrap(car){
             var smug = ["Leather Jack", "2 Torches", "Draft Horse", "Cart", "Rowing Boat"];
             return smug;
         case "Soldier" :
-            var soldider = ["Halberd",  "Firearm", "10 shots", "Shield" , "Full Leather Armour", "Uniform"];
-            return soldider;
+            var soldier = ["Halberd",  "Firearm", "10 shots", "Shield" , "Full Leather Armour", "Uniform"];
+            return soldier;
         case "Squire" :
             var squire = ["Demilance", "Mail Shirt", "Mail Coif", "Leather Jack", "Shield", "Horse", "Saddle", "Harness"];
             return squire; 
